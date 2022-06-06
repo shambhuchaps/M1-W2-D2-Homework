@@ -16,7 +16,7 @@
         }
 
         .main {
-            width: 80%;
+            width: 85%;
             height: max-content;
             background-color: darkgrey;
             margin-inline: auto;
@@ -34,29 +34,56 @@
             margin-left: -0.2em;
         }
 
-        .navbar {
+        .navbar{
             width: 100%;
-            height: 3em;
+            height: 3.3em;
             background-color: black;
-            margin-top: 0;
+            margin-top: 1em;
         }
-
-        .navbar li {
-            float: left;
+    
+        .navbar ul li {
+            position: relative;
             list-style: none;
-            margin-top: 0.7em;
-
+            display: inline-block;
+            padding: 0.2em 1em;
         }
-
-        .navbar a {
-            text-decoration: none;
+        .navbar ul li a{
+            display: block;
+            padding: 0 1em;
             color: white;
-            padding: 0.6em 2em;
+            text-decoration: none;
+            line-height: 2.5em;
+            font-size: 13pt;
             border-radius: 0.5em;
+            padding-top: 0.2em;
         }
         .navbar a:hover{
              color: yellow;
              transition: 500ms ease-in-out;
+        }
+        .navbar ul ul{
+            position: absolute;
+            top: 3em;
+            display: none;
+        }
+        .navbar ul li:hover > ul{
+            display: block;
+        }
+        .navbar ul ul li{
+            width: 11.5em;
+            float: none;
+            display: list-item;
+            position: relative;
+            background-color: #393636;
+        }
+        .navbar ul ul li:hover,
+        .navbar ul ul ul li:hover{
+            background-color:#362525;
+        }
+        .navbar ul ul ul li{
+            position: relative;
+            top: -3.2em;
+            left: 10.1em;
         }
         .navbar .active{
             background-color: #6B8E23;
@@ -66,8 +93,8 @@
         }
 
         .face svg {
-            width: 25px;
-            height: 25px;
+            width: 28px;
+            height: 28px;
             fill: white;
             padding: 0.6em;
         }
@@ -213,17 +240,31 @@
                 <li><a href="sample_web.html">New Page 1</a></li>
                 <li><a class="active" href="page_2.html">New Page 2</a></li>
                 <li><a href="page_3.html">New Pge 3</a></li>
-                <li><a href="page_4.html">New Pge 4</a></li>
+                <li><a href="page_4.html">New Pge 4</a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Courses</a>
+                         <ul>
+                             <li><a href="#">Course 1</a></li>
+                             <li><a href="#">Course 2</a></li>
+                             <li><a href="#">Course 3</a></li>
+                         </ul>
+                     </li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">New Pge 5</a></li>
-            </ul>
-            <div class="face">
-                <a href="www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <div class="face">
+                    <a href="www.facebook.com"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                         <path
-                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
                     </svg>
                 </a>
             </div>
+        </ul>
         </nav>
         <div class="header-img">
             <h2>Header Image</h2>

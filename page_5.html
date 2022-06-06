@@ -69,24 +69,53 @@
 
         }
 
-        .left li {
+        .left ul li{
+            position: relative;
             list-style: none;
+            display: inline-block;
             margin-left: 2em;
-            padding: 0.5em;
+            padding:0.2em 0.3em;
             border-bottom: 1px solid black;
         }
 
-        .left a {
+        .left ul li a {
             text-decoration: none;
             color: brown;
             padding: 0.4em 2em;
             font-size: 16pt;
             border-radius: 0.5em;
+            line-height: 1em;
+            display: block;
         }
         
         .left a:hover{
             color: rgb(8, 8, 37);
             transition: 500ms ease-in-out;
+        }
+        .left ul ul{
+            position: absolute;
+            top: 0em;
+            left: 11em;
+            display: none;
+        }
+        .left ul li:hover > ul{
+            display: block;
+        }
+        .left ul ul li{
+            width: 11.9em;
+            float: none;
+            display: list-item;
+            position: relative;
+            background-color: #F5F5DC;
+        }
+        .left ul ul li:hover,
+        .left ul ul ul li:hover{
+            background-color:rgb(178, 186, 37);
+        }
+        .left ul ul ul li{
+            position: relative;
+            top: 0em;
+            left: -0.9em;
         }
         .active{
             background-color: green;
@@ -148,7 +177,21 @@
                     <li><a href="sample_web.html">New Page 1</a></li>
                     <li><a href="page_2.html">New Page 2</a></li>
                     <li><a href="page_3.html">New Page 3</a></li>
-                    <li><a href="page_4.html">New Page 4</a></li>
+                    <li><a href="page_4.html">New Page 4</a>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Courses</a>
+                             <ul>
+                                 <li><a href="#">Course 1</a></li>
+                                 <li><a href="#">Course 2</a></li>
+                                 <li><a href="#">Course 3</a></li>
+                             </ul>
+                         </li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </li>
                     <li><a class="active" href="page_5.html">New Page 5</a></li>
                 </ul>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora maiores architecto ut consequuntur
